@@ -1,0 +1,38 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: seconds-kill
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    filters: stat
+    initialSize: 1
+    maxActive: 2
+    maxOpenPreparedStatements: 20
+    maxWait: 60000
+    minEvictableIdleTimeMillis: 300000
+    minIdle: 1
+    password: xuehuafeiwu
+    poolPreparedStatements: true
+    testOnBorrow: false
+    testOnReturn: false
+    testWhileIdle: true
+    timeBetweenEvictionRunsMillis: 60000
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/miaosha?serverTimezone=UTC
+    username: root
+    validationQuery: select 'x'
+mybatis:
+  configuration:
+    mapper-locations: classpath:mapper/*.xml
+    map-underscore-to-camel-case: true
+
+redis:
+  host: 127.0.0.1
+#  password: 123456
+  poolMaxIdle: 10
+  poolMaxTotal: 10
+  poolMaxWait: 3
+  port: 6379
+  timeout: 3
+
