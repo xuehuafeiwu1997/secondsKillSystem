@@ -1,0 +1,1 @@
+package com.xmy.secondskill.redis;/** * @author xmy * @date 2021/3/24 11:18 上午 */public class OrderKey extends BasePrefix {    public OrderKey(int expireSeconds, String prefix) {        super(expireSeconds, prefix);    }}

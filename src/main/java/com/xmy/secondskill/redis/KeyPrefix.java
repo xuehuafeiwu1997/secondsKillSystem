@@ -1,0 +1,1 @@
+package com.xmy.secondskill.redis;/** * @author xmy * @date 2021/3/24 11:09 上午 */public interface KeyPrefix {    public int expireSeconds();    public String getPrefix();}

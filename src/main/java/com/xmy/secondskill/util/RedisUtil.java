@@ -1,0 +1,1 @@
+package com.xmy.secondskill.util;/** * @author xmy * @date 2021/3/23 1:25 下午 */public class RedisUtil {}

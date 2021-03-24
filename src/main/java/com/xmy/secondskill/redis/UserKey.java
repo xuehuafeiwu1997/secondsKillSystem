@@ -1,0 +1,1 @@
+package com.xmy.secondskill.redis;import com.xmy.secondskill.entity.User;/** * @author xmy * @date 2021/3/24 11:15 上午 */public class UserKey extends BasePrefix{    private UserKey(String prefix) {        super(prefix);    }    public static UserKey getById = new UserKey("id");    public static UserKey getByName = new UserKey("name");}
