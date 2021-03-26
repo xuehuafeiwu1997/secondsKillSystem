@@ -22,10 +22,6 @@ spring:
     url: jdbc:mysql://localhost:3306/miaosha?serverTimezone=UTC
     username: root
     validationQuery: select 'x'
-mybatis:
-  configuration:
-    mapper-locations: classpath:mapper/*.xml
-    map-underscore-to-camel-case: true
 
 redis:
   host: 127.0.0.1
@@ -35,4 +31,7 @@ redis:
   poolMaxWait: 3
   port: 6379
   timeout: 3
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
 
