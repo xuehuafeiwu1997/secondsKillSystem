@@ -1,0 +1,1 @@
+package com.xmy.secondskill.util;import java.util.UUID;/** * @author xmy * @date 2021/3/26 9:07 下午 */public class UUIDUtil {    public static String uuid() {        return UUID.randomUUID().toString().replace("-","");    }    public static void main(String[] args) {        System.out.println(UUIDUtil.uuid());    }}
