@@ -1,0 +1,1 @@
+package com.xmy.secondskill.redis;/** * @author xmy * @date 2021/3/28 8:48 下午 */public class GoodsKey extends BasePrefix {    private GoodsKey(int expireSeconds, String prefix) {        super(expireSeconds, prefix);    }    public static GoodsKey getGoodsList = new GoodsKey(60, "gl");    public static GoodsKey getGoodsDetail = new GoodsKey(60, "gd");}
