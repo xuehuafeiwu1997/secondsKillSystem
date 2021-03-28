@@ -6,12 +6,12 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     filters: stat
-    initialSize: 1
-    maxActive: 2
+    initialSize: 100
+    maxActive: 1000
     maxOpenPreparedStatements: 20
     maxWait: 60000
     minEvictableIdleTimeMillis: 300000
-    minIdle: 1
+    minIdle: 500
     password: xuehuafeiwu
     poolPreparedStatements: true
     testOnBorrow: false
@@ -26,11 +26,11 @@ spring:
 redis:
   host: 127.0.0.1
 #  password: 123456
-  poolMaxIdle: 10
-  poolMaxTotal: 10
-  poolMaxWait: 3
+  poolMaxIdle: 500
+  poolMaxTotal: 1000
+  poolMaxWait: 500
   port: 6379
-  timeout: 3
+  timeout: 10
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
