@@ -23,6 +23,27 @@ spring:
     username: root
     validationQuery: select 'x'
 
+    rabbitmq:
+      host: 127.0.0.1
+      listener:
+        simple:
+          auto-startup: true
+          concurrency: 10
+          default-requeue-rejected: true
+          max-concurrency: 10
+          prefetch: 1
+      password: guest
+      port: 5672
+      template:
+        retry:
+          enabled: 'true '
+          initial-interval: 1000.0
+          max-attempts: 3
+          max-interval: 10000
+          multiplier: 1.0
+      username: guest
+      virtual-host: /
+
 redis:
   host: 127.0.0.1
 #  password: 123456
