@@ -1,0 +1,1 @@
+package com.xmy.secondskill.redis;/** * @author xmy * @date 2021/3/31 9:05 下午 */public class AccessKey extends BasePrefix{    private AccessKey( int expireSeconds, String prefix) {        super(expireSeconds, prefix);    }    public static AccessKey withExpire(int expireSeconds) {        return new AccessKey(expireSeconds, "access");    }}
